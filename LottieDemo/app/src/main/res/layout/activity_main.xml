@@ -1,38 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ling.lottiedemo.MainActivity">
+    tools:context="com.ling.lottiedemo.ui.MainActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
+        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:lottie_loop="true" />
+        android:layout_height="wrap_content" />
 
-   <Button
-        android:id="@+id/btn_play"
-        android:layout_alignParentBottom="true"
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="播放json动画"/>
+        android:scrollbars="none">
 
-    <Button
-        android:id="@+id/btn_play2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/btn_play"
-        android:layout_alignParentBottom="true"
-        android:text="加速度" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn_play3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/btn_play2"
-        android:layout_alignParentBottom="true"
-        android:text="随手动" />
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="播放json动画" />
+
+            <Button
+                android:id="@+id/btn_play_fast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/btn_play"
+                android:text="加速度" />
+
+            <Button
+                android:id="@+id/btn_play_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/btn_play_fast"
+                android:text="随手动" />
+
+            <Button
+                android:id="@+id/btn_play_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/btn_play_demo"
+                android:text="随手动升级版" />
+
+            <Button
+                android:id="@+id/btn_play_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/btn_play_test"
+                android:text="调研动画" />
+
+        </RelativeLayout>
+    </HorizontalScrollView>
 </RelativeLayout>

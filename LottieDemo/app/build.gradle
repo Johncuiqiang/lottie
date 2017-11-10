@@ -20,6 +20,7 @@ android {
 }
 
 dependencies {
+    compile project(':lottie')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -27,5 +28,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.matthew-tamlin:sliding-intro-screen:3.2.0'
     testCompile 'junit:junit:4.12'
-    compile 'com.airbnb.android:lottie:1.5.2'
 }
